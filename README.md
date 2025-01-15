@@ -4,14 +4,23 @@ Este repositório foi criado como parte dos meus estudos de Análise de Dados, e
 
 ---
 
-## Requisitos
+## Aplicação Online
 
-- **Docker** instalado na máquina
+A aplicação está **implantada** (deploy) em:  
+**[Dashboard Dados Python Estudos](https://dashboard-dados-python-estudos.streamlit.app/)**
+
+Você pode acessar o link acima para visualizar imediatamente o dashboard em execução.
+
+---
+
+## Requisitos para Execução Local
+
+- **Docker** instalado na máquina  
 - Acesso aos arquivos deste repositório
 
 ---
 
-## Como executar a aplicação
+## Como executar a aplicação localmente
 
 1. **Clonar o repositório**  
    ```bash
@@ -30,7 +39,7 @@ Este repositório foi criado como parte dos meus estudos de Análise de Dados, e
    docker run -p 8501:8501 streamlit-app
    ```
 5. **Acessar a aplicação**  
-   Abra o navegador em [http://localhost:8501](http://localhost:8501) para visualizar o dashboard.
+   Abra o navegador em [http://localhost:8501](http://localhost:8501) para visualizar o dashboard localmente.
 
 ---
 
@@ -39,17 +48,17 @@ Este repositório foi criado como parte dos meus estudos de Análise de Dados, e
 - **📊 Main Page.py**: Arquivo principal do Streamlit, contendo a lógica e a interface do dashboard.  
 - **requirements.txt**: Lista de bibliotecas Python necessárias para rodar a aplicação.  
 - **Dockerfile**: Arquivo que define o contêiner Docker para a aplicação.  
-- **data/**: Pasta onde se encontram o arquivo de dados utilizado.
+- **data/**: Pasta onde se encontra o arquivo de dados utilizado.
 
 ---
 
-Este Dockerfile:
+## Sobre o Dockerfile
 
-1. Utiliza a imagem base `python:3.12`.
-2. Cria um diretório de trabalho `/app`.
-3. Copia o arquivo `requirements.txt` e instala as dependências.
-4. Copia o restante dos arquivos para o diretório de trabalho.
-5. Expõe a porta 8501, utilizada pelo Streamlit.
+1. Utiliza a imagem base `python:3.12`.  
+2. Cria um diretório de trabalho `/app`.  
+3. Copia o arquivo `requirements.txt` e instala as dependências.  
+4. Copia o restante dos arquivos para o diretório de trabalho.  
+5. Expõe a porta `8501`, utilizada pelo Streamlit.  
 6. Define o comando para iniciar o Streamlit.
 
 ---
